@@ -36,7 +36,7 @@ class fsaParser:
         #print(self.legalEndStates)
 
     def writeDemoFunc(self):
-        demoFunc = "(defun demo()\n\t(setq fp(open \"theString.txt\" :direction :input))\n\t(setq fsaChar (read  fp \"done\"))\n\t(princ \"processing\")\n\t(princ fsaChar)\n\t(fsa fsaChar)\n)"
+        demoFunc = "(defun demo()\n\t(setq fp(open \"theString.txt\" :direction :input))\n\t(setq fsaChar (read  fp \"done\"))\n\t(princ \"processing\")\n\t(princ fsaChar)\n\t(fresh-line )\n\t(fsa fsaChar)\n)"
         return demoFunc
 
     def writeStartFunc(self):
